@@ -1,0 +1,57 @@
+/* ============================================================
+   AERIS — Responsive Overrides
+   ============================================================ */
+
+/* ── Mobile-first tweaks ───────────────────────────────────── */
+@media (max-width: 480px) {
+  body { padding: 12px; }
+
+  .temp { font-size: 4.2rem; }
+  #location-name { font-size: 1.7rem; }
+
+  .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .dashboard-card { padding: 16px; }
+
+  .photo-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Tablet (768–991px) ────────────────────────────────────── */
+@media (min-width: 768px) and (max-width: 991px) {
+  .app-container { gap: 20px; }
+  .metrics-grid  { grid-template-columns: repeat(3, 1fr); }
+  .dashboard-row { flex-direction: row; }
+}
+
+/* ── Desktop (≥992px) ─────────────────────────────────────── */
+@media (min-width: 992px) {
+  .app-container {
+    flex-direction: row;
+    min-height: calc(100vh - 40px);
+    align-items: flex-start;
+  }
+
+  .sidebar {
+    width: 390px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 20px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+  }
+
+  .main-content {
+    flex: 1;
+    overflow-y: auto;
+    max-height: calc(100vh - 40px);
+    padding-right: 6px;
+  }
+
+  .dashboard-row { flex-direction: row; }
+}
+
+/* ── Custom Scrollbar (Webkit) ─────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.35); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.60); }
